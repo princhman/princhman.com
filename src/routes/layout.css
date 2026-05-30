@@ -1,2 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
+
+@theme {
+    --color-base: oklch(20.5% 0 0);
+
+    --font-sans: "Inter", sans-serif;
+}

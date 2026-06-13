@@ -52,7 +52,7 @@
         <div class="flex flex-col gap-2 pt-8">
             <p class="text-white text-xl font-sans font-bold">Projects</p>
             <div class="flex flex-col gap-3">
-                <div>
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
                     <div class="flex gap-2 items-center">
                         <img
                             src="/quextro.png"
@@ -67,10 +67,10 @@
                     </div>
                     <p class="text-gray-300 text-sm font-sans">
                         Biggest available question database for UK high-school
-                        exams. With filters, completions, and online notebooks.
+                        exams. With filters, completions, and online notebooks
                     </p>
                 </div>
-                <div>
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
                     <div class="flex gap-2 items-center">
                         <img
                             src="/quextro.png"
@@ -84,15 +84,54 @@
                         </a>
                     </div>
                     <p class="text-gray-300 text-sm font-sans">
-                        Study planner with spaced repetion.
+                        Study planner with spaced repetion
                     </p>
+                </div>
+                <div
+                    class="flex justify-between hover:bg-[#212122] py-2 px-1 rounded-sm"
+                >
+                    <div>
+                        <div class="flex gap-2 items-center">
+                            <img
+                                src="/needline-logo.svg"
+                                class="w-6 h-6"
+                                alt="Needline logo"
+                            />
+                            <a href="https://needline.princhman.com">
+                                <p class="text-white text-lg font-sans">
+                                    Needline
+                                </p>
+                            </a>
+                        </div>
+                        <p class="text-gray-300 text-sm font-sans">
+                            Open source self-hostable customer portal built on <a
+                                class="items-baseline inline underline italic bold opacity-70 hover:opacity-100"
+                                href="https://linear.app"
+                            >
+                                Linear <img
+                                    src="/linear-logo.svg"
+                                    class="w-3 h-3 inline"
+                                    alt="Linear logo"
+                                />
+                            </a>
+                        </p>
+                    </div>
+                    <a href="https://github.com/princhman">
+                        <img
+                            src="/github.svg"
+                            class="w-5 h-5 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
+                            alt="Github logo"
+                        />
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="flex flex-col gap-2 pt-8">
             <p class="text-white text-xl font-sans font-bold">Education</p>
-            <div class="flex justify-between items-center">
+            <div
+                class="flex justify-between items-center hover:bg-[#212122] py-2 pr-1 rounded-sm"
+            >
                 <div class="flex gap-2 items-center">
                     <img src="/ucl.png" class="h-10" alt="UCL logo" />
                     <p class="text-white text-lg font-sans">

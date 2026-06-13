@@ -116,7 +116,7 @@
                             </a>
                         </p>
                     </div>
-                    <a href="https://github.com/princhman">
+                    <a href="https://github.com/princhman/needline">
                         <img
                             src="/github.svg"
                             class="w-5 h-5 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"

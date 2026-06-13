@@ -41,9 +41,9 @@
         <!-- body, part 1: about me -->
         <div class="flex flex-col gap-2 pt-8">
             <p class="text-white text-lg font-sans">
-                I am learning with building, to become product-obsessed
-                engineer, focusing on software craftsmanship and UI performance.
-                I love thougtfull designs.
+                I am learning by building, to become a product-centred engineer,
+                focusing on software craftsmanship and UI performance. I love
+                thoughtful designs.
             </p>
         </div>
 

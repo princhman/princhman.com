@@ -11,30 +11,39 @@
                     <p class="text-gray-300 text-sm font-sans">aka princhman</p>
                 </div>
             </div>
-            <div class="flex gap-4">
-                <a href="https://x.com/princh_man">
-                    <img
-                        src="/x.svg"
-                        class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                        alt="X logo"
-                    />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/vladyslav-nalyvaiko-a0aa6b292/"
-                >
-                    <img
-                        src="/linkedin.svg"
-                        class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                        alt="Linkedin logo"
-                    />
-                </a>
-                <a href="https://github.com/princhman">
-                    <img
-                        src="/github.svg"
-                        class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                        alt="Github logo"
-                    />
-                </a>
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-4 justify-end">
+                    <a href="https://x.com/princh_man">
+                        <img
+                            src="/x.svg"
+                            class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
+                            alt="X logo"
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/vladyslav-nalyvaiko-a0aa6b292/"
+                    >
+                        <img
+                            src="/linkedin.svg"
+                            class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
+                            alt="Linkedin logo"
+                        />
+                    </a>
+                    <a href="https://github.com/princhman">
+                        <img
+                            src="/github.svg"
+                            class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
+                            alt="Github logo"
+                        />
+                    </a>
+                </div>
+                <div class="invert opacity-70 hover:opacity-100 cursor-pointer">
+                    <a
+                        href="https://princhman.notion.site/38549491adbf8007a4d7d331c0293a73?v=38549491adbf801aa295000cdf8340aa&source=copy_link"
+                    >
+                        my readings & digests
+                    </a>
+                </div>
             </div>
         </div>
 

@@ -64,6 +64,19 @@
                 <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
                     <div class="flex gap-2 items-center">
                         <img
+                            src="/flashies-icon.png"
+                            class="w-6 h-6"
+                            alt="Flashies logo"
+                        />
+                        <a href="https://flashies.app">
+                            <p class="text-white text-lg font-sans">Flashies</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm font-sans">flashies.app</p>
+                </div>
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
+                    <div class="flex gap-2 items-center">
+                        <img
                             src="/quextro.png"
                             class="w-6 h-6"
                             alt="Quextro logo"

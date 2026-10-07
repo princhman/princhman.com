@@ -84,11 +84,11 @@
                             class="w-6 h-6"
                             alt="Quextro logo"
                         />
-                        <!-- <a href="https://quextro.com"> -->
-                        <p class="text-white text-lg font-sans">
-                            Quextro Database (currently offline)
-                        </p>
-                        <!-- </a> -->
+                        <a href="https://quextro.princhman.com">
+                            <p class="text-white text-lg font-sans">
+                                Quextro Database
+                            </p>
+                        </a>
                     </div>
                     <p class="text-gray-300 text-sm font-sans">
                         Biggest available question database for UK high-school

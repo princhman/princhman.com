@@ -72,7 +72,10 @@
                             <p class="text-white text-lg font-sans">Flashies</p>
                         </a>
                     </div>
-                    <p class="text-gray-300 text-sm font-sans">flashies.app</p>
+                    <p class="text-gray-300 text-sm font-sans">
+                        Language flashcards with translations, pronunciation,
+                        and two-way practice to help new words stick.
+                    </p>
                 </div>
                 <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
                     <div class="flex gap-2 items-center">

@@ -1,248 +1,201 @@
-<div class="flex min-h-screen w-full">
-    <div class="pt-12 mx-auto max-w-3xl w-full">
-        <!-- header: photo,name and socials -->
-        <div class="flex w-full justify-between items-start">
-            <div class="flex items-center">
-                <img src="/photo.jpeg" class="w-36 rounded-xl" alt="" />
-                <div class="pl-8">
-                    <p class="text-white text-3xl font-sans">
-                        Vlad Nalyvaiko 🇺🇦
-                    </p>
-                    <p class="text-gray-300 text-sm font-sans">aka princhman</p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-2">
-                <div class="flex gap-4 justify-end">
-                    <a href="https://x.com/princh_man">
-                        <img
-                            src="/x.svg"
-                            class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                            alt="X logo"
-                        />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/vladyslav-nalyvaiko-a0aa6b292/"
-                    >
-                        <img
-                            src="/linkedin.svg"
-                            class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                            alt="Linkedin logo"
-                        />
-                    </a>
-                    <a href="https://github.com/princhman">
-                        <img
-                            src="/github.svg"
-                            class="w-6 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                            alt="Github logo"
-                        />
-                    </a>
-                </div>
-                <div class="invert opacity-70 hover:opacity-100 cursor-pointer">
-                    <a
-                        href="https://princhman.notion.site/38549491adbf8007a4d7d331c0293a73?v=38549491adbf801aa295000cdf8340aa&source=copy_link"
-                    >
-                        my readings & digests
-                    </a>
-                </div>
-            </div>
-        </div>
+<script lang="ts">
+    type Project = {
+        name: string;
+        url: string;
+        description: string;
+        icon?: string;
+        github?: string;
+        builtOn?: { name: string; url: string; icon: string };
+    };
 
-        <!-- body, part 1: about me -->
-        <div class="flex flex-col gap-2 pt-8">
-            <p class="text-white text-lg font-sans">
-                I am learning by building, to become a product-centred engineer,
-                focusing on software craftsmanship and UI performance. I love
-                thoughtful designs.
-            </p>
-        </div>
+    const socials = [
+        { name: "X", url: "https://x.com/princh_man", icon: "/x.svg" },
+        {
+            name: "LinkedIn",
+            url: "https://www.linkedin.com/in/vladyslav-nalyvaiko-a0aa6b292/",
+            icon: "/linkedin.svg",
+        },
+        {
+            name: "GitHub",
+            url: "https://github.com/princhman",
+            icon: "/github.svg",
+        },
+    ];
 
-        <!-- TODO: put some more information about what learned from the project and what I did -->
-        <!-- body, part 2: Projects -->
-        <div class="flex flex-col gap-2 pt-8">
-            <p class="text-white text-xl font-sans font-bold">Projects</p>
-            <div class="flex flex-col gap-3">
-                <div
-                    class="flex justify-between hover:bg-[#212122] py-2 px-1 rounded-sm"
-                >
-                    <div>
-                        <div class="flex gap-2 items-center">
+    const projects: Project[] = [
+        {
+            name: "Memnoter",
+            url: "https://memnoter.com",
+            icon: "/memnoter-icon.png",
+            github: "https://github.com/princhman/memnoter",
+            description:
+                "Local-first notes app with spaced-repetition flashcards built into the text. Free and open source",
+        },
+        {
+            name: "Flashies",
+            url: "https://flashies.app",
+            icon: "/flashies-icon.png",
+            description:
+                "Language flashcards with translations, pronunciation, and two-way practice to help new words stick",
+        },
+        {
+            name: "Quextro Database",
+            url: "https://quextro.princhman.com",
+            icon: "/quextro.png",
+            description:
+                "Biggest available question database for UK high-school exams. With filters, completions, and online notebooks",
+        },
+        {
+            name: "Quextro Planner",
+            url: "https://planner.quextro.com",
+            icon: "/quextro.png",
+            description: "Study planner with spaced repetition",
+        },
+        {
+            name: "Needline",
+            url: "https://needline.princhman.com",
+            icon: "/needline-logo.svg",
+            github: "https://github.com/princhman/needline",
+            description:
+                "Open source self-hostable customer portal built on",
+            builtOn: {
+                name: "Linear",
+                url: "https://linear.app",
+                icon: "/linear-logo.svg",
+            },
+        },
+        {
+            name: "Top Dog",
+            url: "https://www.topdogtrainingandwelfare.co.uk",
+            icon: "/topdog.png",
+            description:
+                "Website and admin panel built for a dog training business in Surrey",
+        },
+    ];
+
+    const remakes: Project[] = [
+        {
+            name: "London Startups",
+            url: "https://lsm.princhman.com",
+            description:
+                "Unofficial redesign of London Startup Map, using its data: search by area, founder or open role, and a list that follows the map",
+        },
+        {
+            name: "Getricher",
+            url: "https://getricher.princhman.com",
+            description:
+                "Multiplayer remake of richup.io, with a Trade Routes mode of my own: no dice, branching routes, deliveries and auctions",
+        },
+        {
+            name: "Tradewind",
+            url: "https://tradewind.princhman.com",
+            description:
+                "Island-building game to play with friends, inspired by Catan",
+        },
+    ];
+
+    const link =
+        "underline decoration-line decoration-1 underline-offset-4 transition-colors duration-150 hover:decoration-fg";
+    const icon =
+        "invert opacity-50 transition-opacity duration-150 hover:opacity-100";
+</script>
+
+<svelte:head>
+    <title>Vlad Nalyvaiko</title>
+</svelte:head>
+
+{#snippet section(title: string, items: Project[])}
+    <section class="pt-16">
+        <h2 class="font-medium">{title}</h2>
+        <ul class="flex flex-col gap-5 pt-5">
+            {#each items as item (item.name)}
+                <li class="grid gap-x-6 gap-y-1 sm:grid-cols-[11rem_1fr]">
+                    <div class="flex h-6 items-center gap-2.5">
+                        {#if item.icon}
                             <img
-                                src="/memnoter-icon.png"
-                                class="w-6 h-6 rounded-sm"
-                                alt="Memnoter logo"
+                                src={item.icon}
+                                class="size-5 rounded-sm object-contain"
+                                alt=""
                             />
-                            <a href="https://memnoter.com">
-                                <p class="text-white text-lg font-sans">Memnoter</p>
-                            </a>
-                        </div>
-                        <p class="text-gray-300 text-sm font-sans">
-                            Local-first notes app with spaced-repetition flashcards built into the text. Free and open source
+                        {/if}
+                        <a href={item.url} class={link}>{item.name}</a>
+                    </div>
+                    <div class="flex items-start justify-between gap-4">
+                        <p class="text-pretty text-muted">
+                            {item.description}
+                            {#if item.builtOn}
+                                <a
+                                    href={item.builtOn.url}
+                                    class="{link} whitespace-nowrap text-fg"
+                                    >{item.builtOn.name}<img
+                                        src={item.builtOn.icon}
+                                        class="ml-1 inline size-3"
+                                        alt=""
+                                    /></a
+                                >
+                            {/if}
                         </p>
-                    </div>
-                    <a href="https://github.com/princhman/memnoter">
-                        <img
-                            src="/github.svg"
-                            class="w-5 h-5 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                            alt="Github logo"
-                        />
-                    </a>
-                </div>
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <img
-                            src="/flashies-icon.png"
-                            class="w-6 h-6"
-                            alt="Flashies logo"
-                        />
-                        <a href="https://flashies.app">
-                            <p class="text-white text-lg font-sans">Flashies</p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Language flashcards with translations, pronunciation,
-                        and two-way practice to help new words stick.
-                    </p>
-                </div>
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <img
-                            src="/quextro.png"
-                            class="w-6 h-6"
-                            alt="Quextro logo"
-                        />
-                        <a href="https://quextro.princhman.com">
-                            <p class="text-white text-lg font-sans">
-                                Quextro Database
-                            </p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Biggest available question database for UK high-school
-                        exams. With filters, completions, and online notebooks
-                    </p>
-                </div>
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <img
-                            src="/quextro.png"
-                            class="w-6 h-6"
-                            alt="Quextro logo"
-                        />
-                        <a href="https://planner.quextro.com">
-                            <p class="text-white text-lg font-sans">
-                                Quextro planner
-                            </p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Study planner with spaced repetition
-                    </p>
-                </div>
-                <div
-                    class="flex justify-between hover:bg-[#212122] py-2 px-1 rounded-sm"
-                >
-                    <div>
-                        <div class="flex gap-2 items-center">
-                            <img
-                                src="/needline-logo.svg"
-                                class="w-6 h-6"
-                                alt="Needline logo"
-                            />
-                            <a href="https://needline.princhman.com">
-                                <p class="text-white text-lg font-sans">
-                                    Needline
-                                </p>
-                            </a>
-                        </div>
-                        <p class="text-gray-300 text-sm font-sans">
-                            Open source self-hostable customer portal built on <a
-                                class="items-baseline inline underline italic bold opacity-70 hover:opacity-100"
-                                href="https://linear.app"
+                        {#if item.github}
+                            <a
+                                href={item.github}
+                                aria-label="{item.name} on GitHub"
+                                class="-m-2 shrink-0 p-2"
                             >
-                                Linear <img
-                                    src="/linear-logo.svg"
-                                    class="w-3 h-3 inline"
-                                    alt="Linear logo"
+                                <img
+                                    src="/github.svg"
+                                    class="size-4 translate-y-1 {icon}"
+                                    alt=""
                                 />
                             </a>
-                        </p>
+                        {/if}
                     </div>
-                    <a href="https://github.com/princhman/needline">
-                        <img
-                            src="/github.svg"
-                            class="w-5 h-5 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
-                            alt="Github logo"
-                        />
-                    </a>
-                </div>
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <img
-                            src="/topdog.png"
-                            class="w-6 h-6 rounded-sm"
-                            alt="Top Dog logo"
-                        />
-                        <a href="https://www.topdogtrainingandwelfare.co.uk">
-                            <p class="text-white text-lg font-sans">Top Dog</p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Website and admin panel built for a dog training business in Surrey
-                    </p>
-                </div>
-            </div>
-        </div>
+                </li>
+            {/each}
+        </ul>
+    </section>
+{/snippet}
 
-        <!-- body, part 3: one-off takes on existing products -->
-        <div class="flex flex-col gap-2 pt-8">
-            <p class="text-white text-xl font-sans font-bold">Remakes</p>
-            <div class="flex flex-col gap-3">
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <a href="https://lsm.princhman.com">
-                            <p class="text-white text-lg font-sans">London Startups</p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Unofficial redesign of London Startup Map, using its data: search by area, founder or open role, and a list that follows the map
-                    </p>
-                </div>
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <a href="https://getricher.princhman.com">
-                            <p class="text-white text-lg font-sans">Getricher</p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Multiplayer remake of richup.io, with a Trade Routes mode of my own: no dice, branching routes, deliveries and auctions
-                    </p>
-                </div>
-                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
-                    <div class="flex gap-2 items-center">
-                        <a href="https://tradewind.princhman.com">
-                            <p class="text-white text-lg font-sans">Tradewind</p>
-                        </a>
-                    </div>
-                    <p class="text-gray-300 text-sm font-sans">
-                        Island-building game to play with friends, inspired by Catan
-                    </p>
-                </div>
+<main
+    class="mx-auto min-h-screen w-full max-w-2xl px-5 pt-12 pb-20 font-sans text-[15px] leading-6 text-fg antialiased sm:pt-20"
+>
+    <header class="flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+            <img
+                src="/photo.jpeg"
+                class="size-16 rounded-lg object-cover"
+                alt="Vlad Nalyvaiko"
+            />
+            <div>
+                <h1 class="font-medium">Vlad Nalyvaiko 🇺🇦</h1>
+                <p class="text-muted">aka princhman</p>
             </div>
         </div>
+        <nav class="-mr-2 flex">
+            {#each socials as social (social.name)}
+                <a href={social.url} aria-label={social.name} class="p-2">
+                    <img src={social.icon} class="size-4 {icon}" alt="" />
+                </a>
+            {/each}
+        </nav>
+    </header>
 
-        <div class="flex flex-col gap-2 pt-8">
-            <p class="text-white text-xl font-sans font-bold">Education</p>
-            <div
-                class="flex justify-between items-center hover:bg-[#212122] py-2 pr-1 rounded-sm"
-            >
-                <div class="flex gap-2 items-center">
-                    <img src="/ucl.png" class="h-10" alt="UCL logo" />
-                    <p class="text-white text-lg font-sans">
-                        Bsc Computer Science
-                    </p>
-                </div>
-                <p class="text-gray-300 text-sm font-sans">2025-2028</p>
+    <p class="pt-10 text-pretty">
+        I am learning by building, to become a product-centred engineer,
+        focusing on software craftsmanship and UI performance. I love thoughtful
+        designs.
+    </p>
+
+    {@render section("Projects", projects)}
+    {@render section("Remakes", remakes)}
+
+    <section class="pt-16">
+        <h2 class="font-medium">Education</h2>
+        <div class="flex items-center justify-between gap-4 pt-5">
+            <div class="flex items-center gap-2.5">
+                <img src="/ucl.png" class="-ml-1.5 h-7" alt="UCL" />
+                <p>BSc Computer Science</p>
             </div>
+            <p class="shrink-0 tabular-nums text-muted">2025 – 2028</p>
         </div>
-    </div>
-</div>
+    </section>
+</main>

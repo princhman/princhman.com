@@ -1,8 +1,16 @@
+@import "@fontsource-variable/inter";
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --color-base: oklch(20.5% 0 0);
+    --color-base: #111111;
+    --color-fg: #ededed;
+    --color-muted: #8f8f8f;
+    --color-line: #4a4a4a;
 
-    --font-sans: "Inter", sans-serif;
+    --font-sans: "Inter Variable", sans-serif;
+}
+
+:root {
+    color-scheme: dark;
 }

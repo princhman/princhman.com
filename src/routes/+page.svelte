@@ -61,6 +61,32 @@
         <div class="flex flex-col gap-2 pt-8">
             <p class="text-white text-xl font-sans font-bold">Projects</p>
             <div class="flex flex-col gap-3">
+                <div
+                    class="flex justify-between hover:bg-[#212122] py-2 px-1 rounded-sm"
+                >
+                    <div>
+                        <div class="flex gap-2 items-center">
+                            <img
+                                src="/memnoter-icon.png"
+                                class="w-6 h-6 rounded-sm"
+                                alt="Memnoter logo"
+                            />
+                            <a href="https://memnoter.com">
+                                <p class="text-white text-lg font-sans">Memnoter</p>
+                            </a>
+                        </div>
+                        <p class="text-gray-300 text-sm font-sans">
+                            Local-first notes app with spaced-repetition flashcards built into the text. Free and open source
+                        </p>
+                    </div>
+                    <a href="https://github.com/princhman/memnoter">
+                        <img
+                            src="/github.svg"
+                            class="w-5 h-5 invert opacity-70 transition duration-200 hover:scale-110 hover:opacity-100 cursor-pointer"
+                            alt="Github logo"
+                        />
+                    </a>
+                </div>
                 <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
                     <div class="flex gap-2 items-center">
                         <img
@@ -109,7 +135,7 @@
                         </a>
                     </div>
                     <p class="text-gray-300 text-sm font-sans">
-                        Study planner with spaced repetion
+                        Study planner with spaced repetition
                     </p>
                 </div>
                 <div
@@ -148,6 +174,58 @@
                             alt="Github logo"
                         />
                     </a>
+                </div>
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
+                    <div class="flex gap-2 items-center">
+                        <img
+                            src="/topdog.png"
+                            class="w-6 h-6 rounded-sm"
+                            alt="Top Dog logo"
+                        />
+                        <a href="https://www.topdogtrainingandwelfare.co.uk">
+                            <p class="text-white text-lg font-sans">Top Dog</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm font-sans">
+                        Website and admin panel built for a dog training business in Surrey
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- body, part 3: one-off takes on existing products -->
+        <div class="flex flex-col gap-2 pt-8">
+            <p class="text-white text-xl font-sans font-bold">Remakes</p>
+            <div class="flex flex-col gap-3">
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
+                    <div class="flex gap-2 items-center">
+                        <a href="https://lsm.princhman.com">
+                            <p class="text-white text-lg font-sans">London Startups</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm font-sans">
+                        Unofficial redesign of London Startup Map, using its data: search by area, founder or open role, and a list that follows the map
+                    </p>
+                </div>
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
+                    <div class="flex gap-2 items-center">
+                        <a href="https://getricher.princhman.com">
+                            <p class="text-white text-lg font-sans">Getricher</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm font-sans">
+                        Multiplayer remake of richup.io, with a Trade Routes mode of my own: no dice, branching routes, deliveries and auctions
+                    </p>
+                </div>
+                <div class="hover:bg-[#212122] py-2 px-1 rounded-sm">
+                    <div class="flex gap-2 items-center">
+                        <a href="https://tradewind.princhman.com">
+                            <p class="text-white text-lg font-sans">Tradewind</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm font-sans">
+                        Island-building game to play with friends, inspired by Catan
+                    </p>
                 </div>
             </div>
         </div>
